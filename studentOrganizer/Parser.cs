@@ -28,7 +28,9 @@ namespace studentOrganizer
                 Console.WriteLine("False");
 
                 //Здесь надо прописать запросы
-                Parser.GetSchedule(Parser.GetGroupID("3/42")); // поменять эту строчку, когда переделаю запросы
+                //попробовал - что-то пошло не так
+                // Parser.GetGroupID("3/42");
+                // Parser.GetSchedule("3%2F42");
 
                 using (FileStream fstream = new FileStream("./TimeTabel.json", FileMode.OpenOrCreate))
                 {
@@ -38,7 +40,6 @@ namespace studentOrganizer
                     fstream.Write(array, 0, array.Length);
                     string[] TimeTable = File.ReadAllLines("./TimeTable.json");
                     // добавлено по просьбе Кости, кидается исключениями. Опечатка в названии "TimeTabel"?
-                    fstream.Close(); // оказывается потоки нужно закрывать, иначе рискуем получить исключение, что файл уже используется
                     Console.WriteLine("Текст записан в файл");
                 }
             }
