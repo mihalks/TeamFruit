@@ -16,7 +16,8 @@ namespace studentOrganizer
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
-            
+            Parser.Pars(); // пока так, потом перенесем, чтобы работало по кнопке
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
