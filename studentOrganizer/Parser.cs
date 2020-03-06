@@ -66,7 +66,7 @@ namespace studentOrganizer
             using (var webClient = new WebClient())
             {
                 //не раскрывать - много текста
-                #region 
+                #region
                 var pars = new NameValueCollection();
                 pars.Add("type", "currentstudentsgroups");
                 pars.Add("idgr", groupID);
