@@ -3,7 +3,7 @@
     class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
   >
     <div class="container">
-      <a class="navbar-brand" [routerLink]="['/']">studentOrganizer</a>
+      <i><B><a class="navbar-brand" [routerLink]="['/']">Органайзер студента</a></B></i>
       <button
         class="navbar-toggler"
         type="button"
@@ -25,17 +25,17 @@
             [routerLinkActive]="['link-active']"
             [routerLinkActiveOptions]="{ exact: true }"
           >
-            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
+            <i><B><a class="nav-link text-dark" [routerLink]="['/']">На главную</a></B></i>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/counter']"
-              >Counter</a
-            >
+            <i><B><a class="nav-link text-dark" [routerLink]="['/counter']"
+              >Чат</a
+            ></B></i>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/fetch-data']"
-              >Fetch data</a
-            >
+            <i><B><a class="nav-link text-dark" [routerLink]="['/fetch-data']"
+              >Расписание</a
+            ></B></i>
           </li>
         </ul>
       </div>
