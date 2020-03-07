@@ -20,28 +20,30 @@ namespace studentOrganizer
             if (System.IO.File.Exists("./TimeTabel.json"))
             {
                 Console.WriteLine("true");
-                string[] TimeTable = File.ReadAllLines("./TimeTable.json");
+                string[] TimeTable = File.ReadAllLines("./TimeTabel.json");//html agility pack
                 // добавлено по просьбе Кости, кидается исключениями. Опечатка в названии "TimeTabel"?
+                //quartz
+                
             }
             else
             {
                 Console.WriteLine("False");
 
-                //Здесь надо прописать запросы
-                //попробовал - что-то пошло не так
-                // Parser.GetGroupID("3/42");
-                // Parser.GetSchedule("3%2F42");
+                // //Здесь надо прописать запросы
+                // //попробовал - что-то пошло не так
+                 Parser.GetGroupID("3/42");
+                 Parser.GetSchedule("3%2F42");
 
-                using (FileStream fstream = new FileStream("./TimeTabel.json", FileMode.OpenOrCreate))
-                {
-                    // преобразуем строку в байты
-                    byte[] array = System.Text.Encoding.Default.GetBytes("РАСПИСАНИЕ");// передать переменую полученую из запроса
-                                                                                       // запись массива байтов в файл
-                    fstream.Write(array, 0, array.Length);
-                    string[] TimeTable = File.ReadAllLines("./TimeTable.json");
-                    // добавлено по просьбе Кости, кидается исключениями. Опечатка в названии "TimeTabel"?
-                    Console.WriteLine("Текст записан в файл");
-                }
+                // using (FileStream fstream = new FileStream("./TimeTabel.json", FileMode.OpenOrCreate))
+                // {
+                //     // преобразуем строку в байты
+                //     byte[] array = System.Text.Encoding.Default.GetBytes("РАСПИСАНИЕ");// передать переменую полученую из запроса
+                //                                                                        // запись массива байтов в файл
+                //     fstream.Write(array, 0, array.Length);
+                //     string[] TimeTable = File.ReadAllLines("./TimeTabel.json");
+                //     // добавлено по просьбе Кости, кидается исключениями. Опечатка в названии "TimeTabel"?
+                //     Console.WriteLine("Текст записан в файл");
+                // }
             }
             return ""; //подумать что должно возвращаться
         }
@@ -74,7 +76,7 @@ namespace studentOrganizer
                 pars.Add("idprep", "");
                 pars.Add("idprepid", "");
                 pars.Add("idaudid", "");
-                pars.Add("idgrid", "9687");
+                pars.Add("idgrid", "9653");
                 pars.Add("form_build_id", "form-WnOwNmk3-tviflUmbW_vrncjxwu82eR14Ky0bydSNa0");
                 pars.Add("form_id", "studschedule_form");
                 pars.Add("_triggering_element_name", "op");
