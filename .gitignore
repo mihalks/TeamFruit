@@ -64,6 +64,8 @@ dlldata.c
 *.pidb
 *.svclog
 *.scc
+*.cache
+*.cachefile
 
 # Chutzpah Test files
 _Chutzpah*
@@ -229,3 +231,6 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+# TimeTabel.json - временный файл
+TimeTabel.json
