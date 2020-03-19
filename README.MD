@@ -8,3 +8,5 @@
 3. начать работу
 4. ???????
 5. PROFIT
+
+может пригодиться https://rio-shaman.ru/razrabotka-cms/php-s-nulja/get-i-post-zaprosy/
