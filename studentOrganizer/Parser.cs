@@ -62,12 +62,10 @@ namespace studentOrganizer
                 System.Console.WriteLine(str.ToString());
                 
                 idgr = group;
-                System.Console.WriteLine(idgr);
                 //регулярочка 
                 Regex regex = new Regex(@"([\d][\d][\d][\d][\d])|([\d][\d][\d][\d])");
                 Match match2 = regex.Match(str);
                 idgrid = match2.ToString();
-                System.Console.WriteLine("idgrid = " + idgrid);
                 // распарсить ответ и передавать результаты дальше в метод Parse.GetSchedule() для получения расписания (сделал, наверное)
             }
         }
