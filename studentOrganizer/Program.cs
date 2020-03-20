@@ -16,7 +16,7 @@ namespace studentOrganizer
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
-             Parser.Pars();
+            Parser.Pars();
             //Здесь надо переделать запросы, и перенести их куда надо
             // Parser.GetGroupID("3/42");
             // Parser.GetSchedule("2/42");
