@@ -7,18 +7,16 @@ using Microsoft.Extensions.Logging;
 
 namespace studentOrganizer.Controllers
 {
-    // [ApiController]
-    // [Route("[controller]")]
+    [ApiController]
+    [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        
-       [HttpPost]
-public string Buy()
-{
-    System.Console.WriteLine($"AAAAAAAAAAAAAAAAA  ");
-       Parser.GetGroupID("3/42");
-                 Parser.GetSchedule("3%2F42");
-    return "Спасибо";
-}
+    [HttpGet]
+        public string Get()
+        {
+            System.Console.WriteLine($"AAAAAAAAAAAAAAAAA  ");
+          Parser.Pars();
+            return "Спасибо";
+        }
     }
 }
