@@ -12,9 +12,9 @@ namespace studentOrganizer.Controllers
     public class WeatherForecastController : ControllerBase
     {
     [HttpGet]
-        public string Get()
+        public string Get(string gr)
         {
-            System.Console.WriteLine($"AAAAAAAAAAAAAAAAA  ");
+            System.Console.WriteLine($"AAAAAAAAAAAAAAAAA {gr} ");
           Parser.Pars();
             return "Спасибо";
         }
