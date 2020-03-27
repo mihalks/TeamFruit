@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 using System.Net;
 using System.Collections.Specialized;
 using System.IO;
-
+using System.Text.RegularExpressions;
 
 namespace studentOrganizer
 {
@@ -31,8 +31,10 @@ namespace studentOrganizer
 
                 // //Здесь надо прописать запросы
                 // //попробовал - что-то пошло не так
-                 Parser.GetGroupID("3/42");
-                 Parser.GetSchedule("3%2F42");
+                string idgr;
+                string idgrid;
+                Parser.GetGroupID("3/186", out  idgr, out idgrid);
+                Parser.GetSchedule(idgr,idgrid);
 
                 // using (FileStream fstream = new FileStream("./TimeTabel.json", FileMode.OpenOrCreate))
                 // {
@@ -48,7 +50,7 @@ namespace studentOrganizer
             return ""; //подумать что должно возвращаться
         }
 
-        public static string GetGroupID(string group) // запрос для получения idgroup и idgrid(просто надо) 
+        public static void GetGroupID(string group, out string idgr, out string idgrid) // запрос для получения idgroup и idgrid(просто надо) 
         {
             string url = "https://www.isuct.ru/index.php?q=student/schedule/currentstudentsgroups";
             using (var webClient = new WebClient())
@@ -57,28 +59,34 @@ namespace studentOrganizer
                 pars.Add("search", group);
                 var response = webClient.UploadValues(url, pars);
                 string str = System.Text.Encoding.UTF8.GetString(response);
-                return str;
-                // распарсить ответ и передавать результаты дальше в метод Parse.GetSchedule() для получения расписания (сделаю, наверное)
+                System.Console.WriteLine(str.ToString());
+                
+                idgr = group;
+                //регулярочка 
+                Regex regex = new Regex(@"([\d][\d][\d][\d][\d])|([\d][\d][\d][\d])");
+                Match match2 = regex.Match(str);
+                idgrid = match2.ToString();
+                // распарсить ответ и передавать результаты дальше в метод Parse.GetSchedule() для получения расписания (сделал, наверное)
             }
         }
 
-        public static string GetSchedule(string groupID) // дописать, чтобы получать расписание любой группы, пока что для 3/42 (сделаю, наверное)
+        public static string GetSchedule(string idgr, string idgrid) // дописать, чтобы получать расписание любой группы, пока что для 3/42 (сделаю, наверное)
         {
             string url = "https://www.isuct.ru/system/ajax"; // туда запрос
             using (var webClient = new WebClient())
             {
-                //не раскрывать - много текста
-                #region
                 var pars = new NameValueCollection();
                 pars.Add("type", "currentstudentsgroups");
-                pars.Add("idgr", groupID);
+                pars.Add("idgr", idgr);
                 pars.Add("idaud", "");
                 pars.Add("idprep", "");
                 pars.Add("idprepid", "");
                 pars.Add("idaudid", "");
-                pars.Add("idgrid", "9653");
+                pars.Add("idgrid", idgrid);
                 pars.Add("form_build_id", "form-WnOwNmk3-tviflUmbW_vrncjxwu82eR14Ky0bydSNa0");
                 pars.Add("form_id", "studschedule_form");
+                //не раскрывать - много текста
+                #region
                 pars.Add("_triggering_element_name", "op");
                 pars.Add("_triggering_element_value", "Показать расписание");
                 pars.Add("ajax_html_ids[]", "visually-impaired-controls");
