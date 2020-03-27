@@ -16,10 +16,20 @@ namespace studentOrganizer
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
-             Parser.Pars();
-            //Здесь надо переделать запросы, и перенести их куда надо
-            // Parser.GetGroupID("3/42");
-            // Parser.GetSchedule("2/42");
+            // Parser.Pars();
+
+            // Ниже - те запросы, которые могу получать расписание для любой группы
+            // чтобы они работали правильно, нужно адекватно связать их с методом Parser.Pars()
+            // так чтобы, Parser.Pars() принимал просто группу например "3/42", 
+            // в нем вызывались методы GetGroupID и GetSchedule. они уже сделают всё что надо
+            // а потом результат всего этого отобразить на странице сайта
+            // P.S. переправить второй метод для того чтобы он писал всё БД 
+            // или переправить метод Parser.Pars чтобы он просто дозаписывал TimeTabel.json
+            //
+            // string idgr;
+            // string idgrid;
+            // Parser.GetGroupID("3/42", out idgr, out idgrid);
+            // Parser.GetSchedule(idgr,idgrid);
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
