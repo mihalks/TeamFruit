@@ -7,35 +7,13 @@
   <title>Кнопка</title>
  </head>
  <body> 
-  <!-- <form action="test.php" method="post" name="form">
-   <p><button>
-    <img src="https://school96.centerstart.ru/sites/school96.centerstart.ru/files/tmp/all-img/Расписание%20уроков.png" width="60" height="60" alt="картинка" style="vertical-align:middle"> 
-    Получить расписание
-   </button></p>
-  </form> -->
-  <form action="test.php" method="post" name="form">
-
-    Из какой вы группы:  3/42<input name="gr" type="radio" value="3/42"> <!--<input name="fio" type="text" value="">--><br><br>
-    <input type="submit" value="Получить расписание">
-  </form>
+  <form  asp-controller="WeatherForecastController" method="Get" action="Get">
+    <!-- <input type="hidden" value="@ViewBag.BookId" name="BookId" />  -->
+    <!-- https://metanit.com/sharp/mvc5/3.2.php  источник-->
+    <p>Введите свою группу 1111 </p>
+    <input type="string" name="gr" /><br><br>
+    
+    <input type="submit" value="Получить" />
+</form>
  </body>
-<!-- <p *ngIf="!forecasts"><em>Loading...</em></p>
 
-<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Temp. (C)</th>
-      <th>Temp. (F)</th>
-      <th>Summary</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let forecast of forecasts">
-      <td>{{ forecast.date }}</td>
-      <td>{{ forecast.temperatureC }}</td>
-      <td>{{ forecast.temperatureF }}</td>
-      <td>{{ forecast.summary }}</td>
-    </tr>
-  </tbody>
-</table> -->
