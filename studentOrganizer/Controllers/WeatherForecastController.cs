@@ -15,7 +15,7 @@ namespace studentOrganizer.Controllers
         public string Get(string gr)
         {
             System.Console.WriteLine($"AAAAAAAAAAAAAAAAA {gr} ");
-          Parser.Pars();
+      //    Parser.Pars();
             return "Спасибо";
         }
     }
