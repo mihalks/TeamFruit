@@ -19,21 +19,27 @@
         class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
         [ngClass]="{ show: isExpanded }"
       >
-        <ul class="navbar-nav flex-grow">
+    <ul class="navbar-nav flex-grow">
           <li
             class="nav-item"
             [routerLinkActive]="['link-active']"
             [routerLinkActiveOptions]="{ exact: true }"
           >
-            <i><a class="nav-link text-dark" [routerLink]="['/']">На главную</a></i>
+            <i><a style="border:3px rgb(0, 0, 0)  solid;" class="nav-link text-dark" [routerLink]="['/']">На главную</a></i>
           </li>
+          <p>
+            &nbsp;&nbsp;&nbsp;
+          </p>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <i><a class="nav-link text-dark" [routerLink]="['/counter']"
+            <i><a style="border:3px rgb(0, 0, 0)  solid;" class="nav-link text-dark" [routerLink]="['/chat']"
               >Чат</a
             ></i>
           </li>
+          <p>
+            &nbsp;&nbsp;&nbsp;
+          </p>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <i><a class="nav-link text-dark" [routerLink]="['/fetch-data']"
+            <i><a style="border:3px rgb(0, 0, 0)  solid;" class="nav-link text-dark" [routerLink]="['/raspisanie']"
               >Расписание</a
             ></i>
           </li>
