@@ -6,16 +6,16 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './raspisanie.component.html'
 })
 export class raspisanieComponent {
-  public forecasts: WeatherForecast[];
+  public forecasts: OrganizerForecast[];
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<WeatherForecast[]>(baseUrl + 'weatherforecast').subscribe(result => {
+    http.get<OrganizerForecast[]>(baseUrl + 'organizerforecast').subscribe(result => {
       this.forecasts = result;
     }, error => console.error(error));
   }
 }
 
-interface WeatherForecast {
+interface OrganizerForecast {
   date: string;
   temperatureC: number;
   temperatureF: number;

@@ -9,7 +9,7 @@ namespace studentOrganizer.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class chatController : ControllerBase
     {
     [HttpGet]
         public string Get(string gr)
