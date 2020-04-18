@@ -20,6 +20,7 @@ namespace studentOrganizer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSignalR();
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -48,8 +49,13 @@ namespace studentOrganizer
             {
                 app.UseSpaStaticFiles();
             }
-
             app.UseRouting();
+    
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapHub<ChatHub>("/mychat");
+            });
 
             // app.UseEndpoints(endpoints =>
             // {
