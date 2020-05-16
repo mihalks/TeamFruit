@@ -21,7 +21,7 @@ namespace studentOrganizer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSignalR();
-            services.AddControllersWithViews();
+            services.AddControllers();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -55,6 +55,7 @@ namespace studentOrganizer
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapHub<ChatHub>("/mychat");
+                 endpoints.MapControllers();
             });
 
             // app.UseEndpoints(endpoints =>

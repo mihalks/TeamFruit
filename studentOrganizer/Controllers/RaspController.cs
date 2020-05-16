@@ -9,14 +9,17 @@ namespace studentOrganizer.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class chatController : ControllerBase
+    public class RaspController : ControllerBase
     {
     [HttpGet]
-        public string Get(string gr)
+        public IActionResult Get([FromQuery] string gr)
         {
             System.Console.WriteLine($"AAAAAAAAAAAAAAAAA {gr} ");
-      //    Parser.Pars();
-            return "Спасибо";
+          Parser.Pars();
+            //return  Ok("Spasibo");
+            return Content("{\"firstName\": \"John\"}");
         }
+
+
     }
 }

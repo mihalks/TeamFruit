@@ -7,12 +7,20 @@ import { HttpClient } from '@angular/common/http';
 })
 export class raspisanieComponent {
   public forecasts: OrganizerForecast[];
-
+private base = "";
+private http : HttpClient;
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<OrganizerForecast[]>(baseUrl + 'organizerforecast').subscribe(result => {
-      this.forecasts = result;
-    }, error => console.error(error));
+    this.base = baseUrl;
+    this.http = http;
+    // http.get<OrganizerForecast[]>(baseUrl + 'Rasp').subscribe(result => {
+    //   this.forecasts = result;
+    //   console.log(this.forecasts);
+    // }, error => console.error(error));
   }
+  rasp(){
+     this.http.get<string>(this.base + 'Rasp').subscribe(result => {
+    console.log(result);
+  }, error => console.error(error));}
 }
 
 interface OrganizerForecast {

@@ -8,13 +8,12 @@
   <title>Кнопка</title>
  </head>
  <body> 
-  <form  asp-controller="OrganizerForecast" method="Get" action="Get">
-    <!-- <input type="hidden" value="@ViewBag.BookId" name="BookId" />  -->
-    <!-- https://metanit.com/sharp/mvc5/3.2.php  источник-->
-    <p>Введите свою группу</p>
-    <input type="string" name="gr" /><br><br>
-    
-    <input type="submit" value="Получить" />
-</form>
+  <div id="messages"></div>
+        <input [(ngModel)]="gr" #ctrl="ngModel" required />
+        <p><button (click)="rasp()">
+                <img src="https://www.stickpng.com/assets/images/580b585b2edbce24c47b23ea.png" width="80" height="60"
+                    alt="картинка" style="vertical-align:middle">
+                Отправить сообщение
+            </button></p>
  </body>
 </div>
