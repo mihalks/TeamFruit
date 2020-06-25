@@ -64,7 +64,6 @@ block{
   top: -100px;
 }
 #bg{
-background-image: url(s1200.png);
-background-position: 50% 50%;
+background-image: url(back.png);
 background-size: cover;
 }
