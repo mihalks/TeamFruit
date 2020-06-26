@@ -15,23 +15,13 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
-h1 {
-  color: rgb(248, 16, 16);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
-}
+
 h2, h3 {
   color: #444;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
 }
-body {
-  margin: 2em;
-}
-body, input[type="text"], button {
-  color: #333;
-  font-family: Cambria, Georgia;
-}
+
 /* everywhere else */
 * {
   font-family: Arial, Helvetica, sans-serif;
@@ -66,4 +56,147 @@ block{
 #bg{
 background-image: url(back.png);
 background-size: cover;
+}
+body{
+position: relative;
+  width: 1600px;
+  height: 1200px;
+  background: #F0F0F0;
+}
+.nav-bar{
+  position: absolute;
+  width: 350px;
+  height: 1200px;
+  left: 0px;
+  top: 0px;
+
+}
+
+h1{
+  position: absolute;
+  height: 30px;
+  left: 36px;
+  right: 79px;
+  top: 27px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+alluser{
+  position: absolute;
+  width: 330px;
+  height: 557px;
+  left: 1211px;
+  top: 532px;
+}
+.secondary{
+  position: absolute;
+height: 35px;
+left: 74.38%;
+right: 22.31%;
+top: calc(50% - 35px/2 - 192.5px);
+font-family: Oxygen;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 35px;
+
+color: #000A12;
+}
+
+.bluerec2{
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 93.33%;
+background: #1E87F0;
+box-shadow: 0px 8px 30px rgba(30, 135, 240, 0.2);
+}
+
+
+top-nav{
+position: absolute;
+width: 1250px;
+height: 80px;
+left: 350px;
+top: 0px;
+}
+imb{
+  position: absolute;
+  width: 116px;
+  height: 103px;
+  left: 248px;
+  top: -1px;
+}
+horizonline{
+  position: absolute;
+  left: 4.29%;
+  right: 4.29%;
+  top: 13.58%;
+  bottom: 86.17%;
+
+  mix-blend-mode: normal;
+  opacity: 0.2;
+  border: 1px solid #979797;
+}
+navi{
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: #FFFFFF;
+}
+bluelineactive{
+  position: absolute;
+  left: 0%;
+  right: 98.86%;
+  top: 8%;
+  bottom: 87.33%;
+  
+  background: #1E87F0;
+}
+.raiting{
+  position: absolute;
+left: 10.29%;
+right: 10.57%;
+top: 8.75%;
+bottom: 87.92%;
+}
+dashboard{
+  position: absolute;
+height: 27px;
+left: 25.99%;
+right: 14.08%;
+top: 6px;
+
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 27px;
+
+color: #000A12;
+}
+
+shape{
+  position: absolute;
+  left: 40%;
+  right: 40%;
+  top: 47.5%;
+  bottom: 25%;
+  
+  background: #F0506E;
+  box-shadow: 0px 8px 30px rgba(240, 80, 110, 0.2);
+}
+smallright{
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  left: 0px;
+  top: 8px;
+  
 }
