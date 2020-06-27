@@ -1,202 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+h1 {
+  color: rgb(248, 16, 16);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
 body{
-position: relative;
-  width: 1600px;
-  height: 1200px;
-  background: #F0F0F0;
-}
-.nav-bar{
-  position: absolute;
-  width: 350px;
-  height: 1200px;
-  left: 0px;
-  top: 0px;
+  position: relative;
+    width: 1600px;
+    height: 1200px;
+    background: #F0F0F0;
+  }
 
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-h1{
-  position: absolute;
-  height: 30px;
-  left: 36px;
-  right: 79px;
-  top: 27px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
-  color: #FFFFFF;
+p {
+  color: #140049;
+  font-family: Impact, Helvetica, sans-serif;
 }
 
-.alluser{
+block{
   position: absolute;
-  width: 330px;
-  height: 557px;
-  left: 1211px;
-  top: 532px;
-  background: #FFFFFF;
-  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-family: sans-serif;
+  font-size: 50px;
 }
 
-.bluerec2{
-position: absolute;
-left: 0%;
-right: 0%;
-top: 0%;
-bottom: 93.33%;
-background: #1E87F0;
-box-shadow: 0px 8px 30px rgba(30, 135, 240, 0.2);
-}
-
-.top-nav{
+.link span{
   position: absolute;
-  width: 1250px;
-  height: 80px;
-  left: 350px;
-  top: 0px;
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(27.1828px);
+  top: -50px;
+  left: 0;
+  opacity: 0;
+  transform: translate(-50%, 50%);
+  font-family: sans-serif;
+  font-size: 50px;
 }
-
-imb{
-  position: absolute;
-  width: 116px;
-  height: 103px;
-  left: 248px;
-  top: -1px;
+.link:hover span{
+  opacity: 0;
+  top: -100px;
 }
-horizonline{
-  position: absolute;
-  left: 4.29%;
-  right: 4.29%;
-  top: 13.58%;
-  bottom: 86.17%;
-
-  mix-blend-mode: normal;
-  opacity: 0.2;
-  border: 1px solid #979797;
-}
-navi{
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-  background: #FFFFFF;
-}
-bluelineactive{
-  position: absolute;
-  left: 0%;
-  right: 98.86%;
-  top: 8%;
-  bottom: 87.33%;
-  
-  background: #1E87F0;
-}
-.raiting{
-  position: absolute;
-left: 10.29%;
-right: 10.57%;
-top: 8.75%;
-bottom: 87.92%;
-}
-dashboard{
-  position: absolute;
-height: 27px;
-left: 25.99%;
-right: 14.08%;
-top: 6px;
-
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 27px;
-
-color: #000A12;
-}
-
-shape{
-  position: absolute;
-  left: 40%;
-  right: 40%;
-  top: 0px;
-  bottom: 25%;
-}
-smallright{
-  position: absolute;
-  left: 0%;
-  right: 85.56%;
-  top: 0%;
-  bottom: 0%;
-}
-bar{
-  position: absolute;
-  width: 96px;
-  height: 32px;
-  left: 391px;
-  top: 20px;
-}
-colocol{
-  position: absolute;
-  width: 63px;
-  height: 67px;
-  left: 30px;
-  top: 8px;
-}
-message{
-  position: absolute;
-  width: 75px;
-  height: 67px;
-  left: 95px;
-  top: 8px;
-}
-.overwiev{
-  position: absolute;
-  width: 1170px;
-  height: 270px;
-  left: 390px;
-  top: 111px;
-}
-ovdays{
-  position: absolute;
-  height: 70px;
-  left: 0%;
-  right: 69.4%;
-  top: 4px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 35px;
-
-  color: #000A12;
-}
-.card1{
-  position: absolute;
-  left: 0%;
-  right: 68.38%;
-  top: 23.33%;
-  bottom: -0.37%;
-    
-  background: linear-gradient(180deg, #40BCF9 0%, #1E87F0 100%);
-  box-shadow: 0px 8px 30px rgba(30, 135, 240, 0.2);
-  border-radius: 4px;
-}
-.card2{
-  position: absolute;
-  left: 34.19%;
-  right: 34.19%;
-  top: 22.96%;
-  bottom: 0%;
-  
-  background: linear-gradient(270deg, #F9D423 0%, #F83600 100%);
-  mix-blend-mode: normal;
-  border-radius: 4px;
-}
-.card3{
-  position: absolute;
-  left: 68.38%;
-  right: 0%;
-  top: 22.96%;
-  bottom: 0%;
-  
-  background: linear-gradient(0deg, #009EFD -30.65%, #2AF598 100%);
-  border-radius: 4px;
+#bg{
+background-image: url(back.png);
+background-size: cover;
 }
