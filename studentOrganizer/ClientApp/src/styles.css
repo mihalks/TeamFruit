@@ -169,11 +169,10 @@ ovdays{
   color: #000A12;
 }
 .card1{
-  position: absolute;
-  left: -0.51%;
-  right: 68.89%;
-  top: 25.19%;
-  bottom: -2.22%;
+  left: -0.34%;
+  right: 68.72%;
+  top: 22.96%;
+  bottom: 0%;
 
   background: linear-gradient(180deg, #40BCF9 0%, #1E87F0 100%);
   box-shadow: 0px 8px 30px rgba(30, 135, 240, 0.2);
