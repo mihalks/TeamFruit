@@ -25,13 +25,13 @@ h2, h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
 }
-body {
-  margin: 2em;
-}
-body, input[type="text"], button {
-  color: #333;
-  font-family: Cambria, Georgia;
-}
+body{
+  position: relative;
+    width: 1600px;
+    height: 1200px;
+    background: #F0F0F0;
+  }
+
 /* everywhere else */
 * {
   font-family: Arial, Helvetica, sans-serif;
@@ -62,8 +62,4 @@ block{
 .link:hover span{
   opacity: 0;
   top: -100px;
-}
-#bg{
-background-image: url(back.png);
-background-size: cover;
 }
