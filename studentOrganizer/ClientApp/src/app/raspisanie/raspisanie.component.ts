@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-raspisanie',
-  templateUrl: './raspisanie.component.html'
+  templateUrl: './raspisanie.component.html',
+  styleUrls: ['./style.css']
 })
 export class raspisanieComponent {
   public forecasts: OrganizerForecast[];
