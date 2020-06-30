@@ -144,3 +144,13 @@ color: #000A12;
   left: 256px;
  top: 0px;
 }
+
+.top-nav{
+  position: absolute;
+  width: 1250px;
+  height: 80px;
+  left: 350px;
+  top: 0px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(27.1828px);
+}
