@@ -34,7 +34,13 @@
 
       <div class="nav-charts">
         <div class="charts">Чат</div>
-        <div class="messagepng"><img src="assets/charts.png" width="21px" height="20px"></div>
+        <div class="nav-item"
+        [routerLinkActive]="['link-active']"
+        [routerLinkActiveOptions]="{ exact: true }">
+        <a class="messagepng" [routerLink]="['/chat']">
+          <img src="assets/charts.png" width="21px" height="20px">
+        </a>
+      </div>
         <div class="smallright">
           <div class="nav-item"
            [routerLinkActive]="['link-active']"
@@ -48,8 +54,14 @@
   
       <div class="nav-tables">
         <div class="tablets">Расписание</div>
-        <div class="tablespng">
+        <div class="nav-item"
+        [routerLinkActive]="['link-active']"
+        [routerLinkActiveOptions]="{ exact: true }">
+        <a class="tablespng" [routerLink]="['/raspisanie']">
           <img src="assets/table.png" width="70px" height="40px">
+        </a>
+      </div>
+      
           <div class="smallright1">
             <div class="nav-item"
              [routerLinkActive]="['link-active']"
@@ -63,6 +75,5 @@
       </div>
       </div>
       </div>
-    </div>
   </nav>
 </header>
