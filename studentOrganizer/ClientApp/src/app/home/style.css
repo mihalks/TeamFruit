@@ -101,3 +101,24 @@
   
   color: #FFFFFF;
 }
+
+.mtriangle1{
+  position: absolute;
+  width: 370px;
+  height: 208px;
+  left: 0px;
+  top: 0px;  
+}
+
+.oval{
+  position: absolute;
+  left: 16%;
+  top: 0.2%;
+  bottom: -34.25%;
+}
+.oval2{
+  position: absolute;
+  left: 18.5%;
+  top: +0.1%;
+  bottom: -34.25%;
+}
