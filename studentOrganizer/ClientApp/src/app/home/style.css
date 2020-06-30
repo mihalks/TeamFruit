@@ -104,13 +104,53 @@
 
 .oval{
   position: absolute;
-  left: 16%;
-  top: 0.2%;
-  bottom: -34.25%;
-}
-.oval2{
-  position: absolute;
   left: 18.5%;
   top: +0.1%;
   bottom: -34.25%;
+}
+
+.group{
+  position: absolute;
+  left: 0%;
+  right: -0.27%;
+  top: 0%;
+  bottom: 77.88%;
+}
+.hline{
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 97.83%;
+  bottom: 0%;
+  background: #DADADA;
+}
+.date1b{
+  position: absolute;
+  left: 68.55%;
+  right: 23.5%;
+  top: 2.59%;
+  bottom: 86.3%;
+  background: #1E87F0;
+  box-shadow: 0px 8px 30px  rgba(30, 135, 240, 0.2);
+  border-radius: 15.5px;
+}
+.date2b{
+  position: absolute;
+  left: 79.49%;
+  right: 12.56%;
+  top: 2.59%;
+  bottom: 86.3%;
+  background: #FAA05A;
+  box-shadow: 0px 8px 30px rgba(250, 160, 90, 0.2);
+  border-radius: 15.5px;
+}
+.date3b{
+  position: absolute;
+  left: 90.43%;
+  right: 1.62%;
+  top: 2.59%;
+  bottom: 86.3%;  
+  background: #32D296;
+  box-shadow: 0px 8px 30px rgba(50, 210, 150, 0.2);
+  border-radius: 15.5px;
 }
