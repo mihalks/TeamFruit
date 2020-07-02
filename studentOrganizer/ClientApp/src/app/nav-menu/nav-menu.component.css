@@ -39,7 +39,7 @@ html {
   right: 0%;
   top: 0%;
   bottom: 93.33%;
-  background: #1E87F0;
+  background: #6ab5ff;
   box-shadow: 0px 8px 30px rgba(30, 135, 240, 0.2);
 }
 
@@ -55,6 +55,7 @@ html {
   line-height: 30px;
   color: #FFFFFF;
 }
+
 
 .imb{
   position: absolute;
