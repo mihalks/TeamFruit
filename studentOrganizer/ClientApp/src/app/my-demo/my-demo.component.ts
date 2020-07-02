@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class MyDemoComponent implements OnInit {
 
   days = [
-    {name: 'sun', color: 'red'},
-    {name: 'mon', color: 'blue' }, 
-    {name: 'tue', color: 'yellow'}];
+    {name: 'Понедельник', color: 'red'},
+    {name: 'Вторник', color: 'blue' },
+    {name: 'tue', color: 'yellow'},
+    {name: 'wed', color: 'green'}
+  ];
 
   constructor() { }
 

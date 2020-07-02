@@ -3,43 +3,12 @@
   window.dataLayer = window.dataLayer || []; function gtat() { dataLAyer.push(arguments); } gtag('js', new Date()); gtag('config',UA-6483399-23);
 </script> -->
 
-<app-my-demo></app-my-demo>
-    <!-- <div class="container">
-    <div class="overwiev">
-      <div class="ovdays">Пары в ближайшие дни</div>
-      <div class="date1b"></div>
-      <div class="date2b"></div>
-      <div class="date3b"></div>
-      <div class="card1">    
-        <div class="oval">
-          <img src="assets/ova1.png">
-        </div>
-        <div class="group">
-          <div class="hline"></div>
-        </div>
+<div class="container">
+  <div class="overwiev">
+    <div class="ovdays">Пары в ближайшие дни</div>
+    <div class="date1b">{{currentDate | date:"dd"}}</div>
+    <div class="date2b">{{currentDate | date:"MM"}}</div>
+    <div class="date3b">{{currentDate | date: "yyyy"}}</div>
   </div>
-      <div class="namecard1">Первый день</div>
-      <div class="card2">
-        <div class="oval">
-          <img src="assets/ova2.png">
-        </div>
-        <div class="group">
-          <div class="hline"></div>
-        </div>
-    </div>
-      <div class="namecard2">Второй день</div>
-      <div class="card3">
-        <div class="oval">
-          <img src="assets/ova3.png">
-        </div>
-        <div class="group">
-          <div class="hline"></div>
-        </div>
-      </div>
-      <div class="namecard3">Третий день</div>
-    </div>
-    <div class="alluser">
-    </div>
-  </div>
-</header> -->
-
+    <app-my-demo></app-my-demo>
+</div>
