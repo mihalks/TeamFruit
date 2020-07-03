@@ -22,6 +22,8 @@ private http : HttpClient;
      this.http.get<string>(this.base + 'Rasp').subscribe(result => {
     console.log(result);
   }, error => console.error(error));}
+  ngOnInit() {
+  }
 }
 
 interface OrganizerForecast {
@@ -29,4 +31,5 @@ interface OrganizerForecast {
   temperatureC: number;
   temperatureF: number;
   summary: string;
+  
 }
