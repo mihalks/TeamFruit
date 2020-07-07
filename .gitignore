@@ -232,5 +232,9 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 
-# TimeTabel.json - временный файл
-TimeTabel.json
+# TimeTabel - временный файл
+TimeTable.json
+TimeTable.html
+# тож временные файлы какие-то
+launch.json
+tasks.json
