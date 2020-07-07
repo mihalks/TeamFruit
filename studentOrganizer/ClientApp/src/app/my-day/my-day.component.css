@@ -1,0 +1,11 @@
+.myComponent {
+    background-color: red;
+    width: 200px;
+}
+.card2{
+    width: 302px;
+    height: 208px;
+    background: linear-gradient(270deg, #F9D423 0%, #F83600 100%);
+    mix-blend-mode: normal;
+    border-radius: 4px;
+  }

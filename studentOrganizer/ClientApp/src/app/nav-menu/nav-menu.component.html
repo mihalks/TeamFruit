@@ -3,48 +3,81 @@
     class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
   >
     <div class="container">
-      <i><a class="navbar-brand" [routerLink]="['/']">Органайзер студента</a></i>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target=".navbar-collapse"
-        aria-label="Toggle navigation"
-        [attr.aria-expanded]="isExpanded"
-        (click)="toggle()"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div
-        class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
-        [ngClass]="{ show: isExpanded }"
-      >
-    <ul class="navbar-nav flex-grow">
-          <li
-            class="nav-item"
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target=".navbar-collapse"
+      aria-label="Toggle navigation"
+      [attr.aria-expanded]="isExpanded"
+      (click)="toggle()">
+    </button>
+    <div
+      class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
+      [ngClass]="{ show: isExpanded }"
+    >
+    <div class="top-nav"></div>
+      <div class="nav-bar">
+        <header class="bluerec2">
+          <div class="snav">Расписание ИГХТУ</div>
+          <div class="imb">
+            <div class="nav-item"
             [routerLinkActive]="['link-active']"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
-            <i><a style="border:3px rgb(0, 0, 0)  solid;" class="nav-link text-dark" [routerLink]="['/']">На главную</a></i>
-          </li>
-          <p>
-            &nbsp;&nbsp;&nbsp;
-          </p>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <i><a style="border:3px rgb(0, 0, 0)  solid;" class="nav-link text-dark" [routerLink]="['/chat']"
-              >Чат</a
-            ></i>
-          </li>
-          <p>
-            &nbsp;&nbsp;&nbsp;
-          </p>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <i><a style="border:3px rgb(0, 0, 0)  solid;" class="nav-link text-dark" [routerLink]="['/raspisanie']"
-              >Расписание</a
-            ></i>
-          </li>
-        </ul>
+            [routerLinkActiveOptions]="{ exact: true }">
+            <a href="#ссылка"  class="nav-link" [routerLink]="['/']">
+            <img onmouseover="this.src='assets/gerb_1.png';" onmouseout="this.src='assets/gerb_0.png';" src="assets/gerb_0.png" width="116px" height="103px">
+            </a>
+          </div>
+        </div>
+        </header>
+        <div class="horizonline"></div>
+
+        <div class="date1b"><div class="todays">{{currentDate | date:"dd"}}</div></div>
+        <div class="date2b"><div class="todays">{{currentDate | date:"MM"}}</div></div>
+        <div class="date3b"><div class="todays">{{currentDate | date: "yyyy"}}</div></div>
+
+      <div class="nav-charts">
+        <div class="charts">Чат</div>
+        <div class="nav-item"
+        [routerLinkActive]="['link-active']"
+        [routerLinkActiveOptions]="{ exact: true }">
+        <a href="#ссылка" class="messagepng" [routerLink]="['/chat']">
+          <img onmouseover="this.src='assets/charts1.png';" onmouseout="this.src='assets/charts.png';" src="assets/charts.png" width="21px" height="20px">
+        </a>
       </div>
-    </div>
+        <div class="smallright">
+          <div class="nav-item"
+           [routerLinkActive]="['link-active']"
+           [routerLinkActiveOptions]="{ exact: true }">
+           <a  class="nav-link" [routerLink]="['/chat']">
+             <img src="assets/ship.png" width="6.7px" height="10.8px">
+           </a>
+           </div>
+         </div>
+      </div>
+  
+      <div class="nav-tables">
+        <div class="tablets">Расписание</div>
+        <div class="nav-item"
+        [routerLinkActive]="['link-active']"
+        [routerLinkActiveOptions]="{ exact: true }">
+        <a href="#ссылка" class="tablespng" [routerLink]="['/raspisanie']">
+          <img onmouseover="this.src='assets/table1.png';" onmouseout="this.src='assets/table.png';" src="assets/table.png" width="70px" height="40px">
+        </a>
+      </div>
+      
+          <div class="smallright1">
+            <div class="nav-item"
+             [routerLinkActive]="['link-active']"
+             [routerLinkActiveOptions]="{ exact: true }">
+             <a  class="nav-link" [routerLink]="['/raspisanie']">
+               <img src="assets/ship.png" width="6.7px" height="10.8px">
+             </a>
+             </div>
+           </div>
+        </div>
+      </div>
+      </div>
+      </div>
   </nav>
 </header>

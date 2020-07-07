@@ -12,6 +12,12 @@ export class NavMenuComponent {
     this.isExpanded = false;
   }
 
+  currentDate: Date;
+
+  constructor() {
+    this.currentDate = new Date();
+   }
+
   toggle() {
     this.isExpanded = !this.isExpanded;
   }

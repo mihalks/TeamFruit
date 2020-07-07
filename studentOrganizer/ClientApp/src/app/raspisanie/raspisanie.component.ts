@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-raspisanie',
-  templateUrl: './raspisanie.component.html'
+  templateUrl: './raspisanie.component.html',
+  styleUrls: ['./style.css']
 })
 export class raspisanieComponent {
   public forecasts: OrganizerForecast[];
@@ -21,6 +22,8 @@ private http : HttpClient;
      this.http.get<string>(this.base + 'Rasp').subscribe(result => {
     console.log(result);
   }, error => console.error(error));}
+  ngOnInit() {
+  }
 }
 
 interface OrganizerForecast {
@@ -28,4 +31,5 @@ interface OrganizerForecast {
   temperatureC: number;
   temperatureF: number;
   summary: string;
+  
 }
