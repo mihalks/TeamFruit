@@ -68,15 +68,15 @@ block{
 
 .telo{
   position: absolute;
+
   width: 1250px;
   height: 1120px;
   left: 370px;
   top: 140px;
+
 }
 .fix{
 position: sticky;
 top: 50px;
 left: 0;
 right: 50;
-}
-
