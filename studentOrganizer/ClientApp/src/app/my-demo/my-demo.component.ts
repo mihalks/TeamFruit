@@ -11,7 +11,7 @@ export class MyDemoComponent implements OnInit {
     {name: 'Понедельник', color: 'red'},
     {name: 'Вторник', color: 'blue' },
     {name: 'Среда', color: 'yellow'},
-    {name: 'четверг', color: 'green'}
+    {name: 'Четверг', color: 'green'}
   ];
 
   constructor() { }

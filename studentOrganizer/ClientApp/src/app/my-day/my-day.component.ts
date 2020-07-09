@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { logging } from 'protractor';
 
 @Component({
   selector: 'app-my-day',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./my-day.component.css']
 })
 export class MyDayComponent implements OnInit {
-  @Input() day: string;
+  @Input() day: StringConstructor;
 
   constructor() { }
 
