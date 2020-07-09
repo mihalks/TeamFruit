@@ -73,3 +73,9 @@ block{
   left: 395px;
   top: 98px;
 }
+.fix{
+position: sticky;
+top: 50px;
+left: 0;
+right: 50;
+}
