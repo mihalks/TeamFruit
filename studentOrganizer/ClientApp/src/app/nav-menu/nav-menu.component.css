@@ -158,30 +158,30 @@ color: #000A12;
 
 .date1b{
   position: absolute;
-left: 8.57%;
-right: 64.86%;
-top: 8.83%;
-bottom: 88.67%;
+  left: 7.14%;
+  right: 66.29%;
+  top: 29.75%;
+  bottom: 67.75%;
   background: #1E87F0;
   box-shadow: 0px 8px 30px  rgba(30, 135, 240, 0.2);
   border-radius: 15.5px;
 }
 .date2b{
   position: absolute;
-  left: 37.71%;
-  right: 35.71%;
-  top: 8.83%;
-  bottom: 88.67%;
+  left: 36.57%;
+  right: 36.86%;
+  top: 29.75%;
+  bottom: 67.75%;
   background: #FAA05A;
   box-shadow: 0px 8px 30px rgba(250, 160, 90, 0.2);
   border-radius: 15.5px;
 }
 .date3b{
   position: absolute;
-  left: 66.86%;
-  right: 6.57%;
-  top: 8.83%;
-  bottom: 88.67%;
+  left: 66%;
+  right: 7.43%;
+  top: 29.75%;
+  bottom: 67.75%;
   background: #32D296;
   box-shadow: 0px 8px 30px rgba(50, 210, 150, 0.2);
   border-radius: 15.5px;
@@ -202,4 +202,42 @@ bottom: 88.67%;
   text-align: center;
   
   color: #FFFFFF;
+}
+.blueline{
+  position: absolute;
+  left: 0%;
+  right: 98.86%;
+  top: 8%;
+  bottom: 87.33%;
+
+  background: #1E87F0;
+}
+.rait{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 36px;
+  top: 96px;
+}
+.raiting{
+  position: absolute;
+height: 27px;
+left: 30.86%;
+right: 21.71%;
+top: calc(50% - 27px/2 - 476.5px);
+
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 27px;
+
+
+color: #000A12;
+}
+.smallright0{
+  position: absolute;
+  width: 6.8px;
+  height: 10.8px;
+  left: 290px;
+  top: 103px;
 }
