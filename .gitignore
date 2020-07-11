@@ -238,3 +238,6 @@ TimeTable.html
 # тож временные файлы какие-то
 launch.json
 tasks.json
+
+#guess what
+simpleChat/node_modules
