@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 export class chatComponent implements OnInit {
   public currentCount = 0;
 
+  private messages = [];
+
   private connection;
   name: string = '';
 
@@ -26,6 +28,8 @@ export class chatComponent implements OnInit {
     this.connection = new HubConnectionBuilder().withUrl('/mychat').build();
 
     this.connection.on('Send', (data) => {
+      console.log(data);
+      this.messages.push(data);
       console.log(data);
     });
     await this.connection.start();
