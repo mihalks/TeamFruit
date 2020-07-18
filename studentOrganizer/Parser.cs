@@ -2,9 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using System.Net;
 using System.Net.Http;
 using System.Collections.Specialized;
@@ -15,12 +12,19 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Serialization;
+using System.Data;
 
 namespace studentOrganizer
 {
+    public struct Day // not complete
+    {
+        public string Name { get; set; } // день недели
+        public List<KeyValuePair<string, string>> Class { get; set; } // список пар (время-название)
+    }
     public static class Parser
     {
-        public static string Pars(string group) 
+        public static string Pars(string group)
         // еше не готов, проблемы с обработкой полученных данных и стабильностью отправленных вызовов. 
         //нужно искать, как самому генерировать form_buid_id и theme_token, либо брать как-то из другого запроса
         {
@@ -38,7 +42,7 @@ namespace studentOrganizer
                 string idgr;
                 string idgrid;
                 Parser.GetGroupID(group, out idgr, out idgrid);
-                var a = Parser.GetSchedule(idgr, idgrid, "form-NuSVQj4_dVc7nTZ6wtgFvoWrZnQbZyFOGIpFGBhXo7k", "dESk-vzGrzFaEo7EC6r-rBN7NwuA1neQikPP2EHkzjc");
+                var a = Parser.GetSchedule(idgr, idgrid, "form-VgqLx3OR83ex6fw2xvNT2KJZDbe6ohfguNIyvdVMY3A", "KwnFX21JG1hksPpOke8Yx7X7NrQ1q1kFfaEx3tUXcPc");
 
                 // using (FileStream fstream = new FileStream("./TimeTabel.json", FileMode.OpenOrCreate))
                 // {
@@ -73,6 +77,25 @@ namespace studentOrganizer
             Match match2 = regex.Match(str);
             idgrid = match2.ToString();
             // распарсить ответ и передавать результаты дальше в метод Parse.GetSchedule() для получения расписания (сделал, наверное)
+        }
+        private static byte[] Post(string url, NameValueCollection queryData) // старый Post метод, через WebClient
+        {
+            using (var webClient = new WebClient())
+            {
+                webClient.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
+                byte[] responseArr = webClient.UploadValues(url, "POST", queryData);
+                return responseArr;
+            }
+        }
+        private static async Task<string> Post2(string url, List<KeyValuePair<string, string>> queryData) // новый, через HttpClient
+        {
+            using (HttpClient httpClient = new HttpClient())
+            {
+                var content = new FormUrlEncodedContent(queryData);
+                var result = await httpClient.PostAsync(url, content);
+                string rawSchedule = result.Content.ReadAsStringAsync().Result;
+                return rawSchedule;
+            }
         }
 
         public static string GetSchedule(string idgr, string idgrid, string form_build_id, string ajax_page_state_theme_token) // дописать, чтобы получать расписание любой группы, пока что для 3/42 (сделаю, наверное)
@@ -316,23 +339,50 @@ namespace studentOrganizer
 
             Encoding utf8 = new UTF8Encoding(true);
 
-            //string rawSchedule = System.Text.Encoding.UTF8.GetString(Post(url, queryData));
             string rawSchedule = Post2(url, queryData).Result;
-            rawSchedule = Regex.Unescape(rawSchedule);
 
-            //var htmlCleaner = new Regex("^<td> </td>$", RegexOptions.Singleline);
-            //var b = htmlCleaner.Matches(rawSchedule);
+            var jObject = JsonConvert.DeserializeObject(rawSchedule);
+            // идея такая: структура : день{ название дня(понед) список пар ключ-значение(8 00 - Инфа) }
+            // как реализовывать ыыыы
+            // в первой строке юзлесс инфа, во второй 8 нод, первая - день недели, остальные - пары по дням к указанному времени 
 
-            //var htmlDoc = new HtmlAgilityPack.HtmlDocument();
-            //htmlDoc.LoadHtml(rawSchedule);
-            //JObject o = JObject.Parse(rawSchedule);
+            var rawTimeTable = JArray.FromObject(jObject)[3].ToArray()[3];
 
-            //var jObject = JsonConvert.DeserializeObject(rawSchedule);
+            var str = JsonConvert.SerializeObject(rawTimeTable);
+            var htmlDoc = new HtmlAgilityPack.HtmlDocument();
+            htmlDoc.LoadHtml(str);
+            //var headers = htmlDoc.DocumentNode.SelectNodes("//tr").Where(x=>x.ChildNodes.Count == 7);
+            DataTable table = new DataTable();
 
+            /*foreach(var header in headers)
+            {
+                table.Columns.Add(header.InnerText);
+            }*/
+            //(x=>x.ChildNodes.Count == 8 ||x.ChildNodes.Count == 9)
+            foreach (var row in htmlDoc.DocumentNode.SelectNodes("//tr"))
+            {
+                table.Rows.Add(row.SelectNodes("td").Select(x => x.InnerText).ToArray());
+            }
 
-            //var result = htmlDoc.GetElementbyId("form-ajax-node-content").ChildNodes.Where(x => x.Name == "tr");
+            /*var times = new List<string>();
+            var subjects = new List<string>();
+            // первый элемент - время, остальные 7 - пары по дням недели, нужно "перевернуть" это расписание, чтобы было по дням
+            foreach (var node in timeT.DocumentNode.SelectNodes("//tr"))
+            {
+                var childNodes = node.ChildNodes;
+                if(childNodes.Count == 3)
+                {
+                    continue;
+                }
+                if (childNodes.Count == 9)
+                {
+                    childNodes.RemoveAt(0);
+                }
+                times.Add(childNodes.ToList()[0].InnerText);
+                subjects.AddRange(childNodes);
+            }*/
 
-            Byte[] encodedBytes = utf8.GetBytes(rawSchedule);
+            /*Byte[] encodedBytes = utf8.GetBytes(rawSchedule);
 
             using (FileStream fileWithSchedule = new FileStream("./TimeTable.html", FileMode.OpenOrCreate))
             {
@@ -345,27 +395,8 @@ namespace studentOrganizer
                 string line = string.Empty;
                 line = sr.ReadToEnd();
                 Console.WriteLine(line);
-            }
+            }*/
             return rawSchedule;
-        }
-        private static byte[] Post(string url, NameValueCollection queryData) // старый Post метод, через WebClient
-        {
-            using (var webClient = new WebClient())
-            {
-                webClient.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
-                byte[] responseArr = webClient.UploadValues(url, "POST", queryData);
-                return responseArr;
-            }
-        }
-        private static async Task<string> Post2(string url, List<KeyValuePair<string, string>> queryData) // новый, через HttpClient
-        {
-            using (HttpClient httpClient = new HttpClient())
-            {
-                var content = new FormUrlEncodedContent(queryData);
-                var result = await httpClient.PostAsync(url, content);
-                string rawSchedule = result.Content.ReadAsStringAsync().Result;
-                return rawSchedule;
-            }
         }
     }
 }
