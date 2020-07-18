@@ -16,7 +16,9 @@
       class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
       [ngClass]="{ show: isExpanded }"
     >
-    <div class="top-nav"></div>
+    <div class="top-nav">
+
+    </div>
       <div class="nav-bar">
         <header class="bluerec2">
           <div class="snav">Расписание ИГХТУ</div>
@@ -30,12 +32,23 @@
           </div>
         </div>
         </header>
+        <div class="blueline"></div>
+        <div class="rait"><img src="assets/rait.png" width="60px" height="60px"></div>
+        <div class="raiting">Рейтинг студента</div>
         <div class="horizonline"></div>
-
-        <div class="date1b"><div class="todays">{{currentDate | date:"dd"}}</div></div>
+        <div class="smallright0">
+          <div class="nav-item"
+           [routerLinkActive]="['link-active']"
+           [routerLinkActiveOptions]="{ exact: true }">
+           <a  class="nav-link" [routerLink]="['/raiting']">
+             <img src="assets/ship.png" width="6.7px" height="10.8px">
+           </a>
+           </div>
+         </div>
+       
         <div class="date2b"><div class="todays">{{currentDate | date:"MM"}}</div></div>
         <div class="date3b"><div class="todays">{{currentDate | date: "yyyy"}}</div></div>
-
+        <div class="date1b"><div class="todays">{{currentDate | date:"dd"}}</div></div>
       <div class="nav-charts">
         <div class="charts">Чат</div>
         <div class="nav-item"
