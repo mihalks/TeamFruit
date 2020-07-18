@@ -9,6 +9,8 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { chatComponent } from './chat/chat.component';
 import { raspisanieComponent } from './raspisanie/raspisanie.component';
+import { MyDemoComponent } from './my-demo/my-demo.component';
+import { MyDayComponent } from './my-day/my-day.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { raspisanieComponent } from './raspisanie/raspisanie.component';
     NavMenuComponent,
     HomeComponent,
     chatComponent,
-    raspisanieComponent
+    raspisanieComponent,
+    MyDemoComponent,
+    MyDayComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

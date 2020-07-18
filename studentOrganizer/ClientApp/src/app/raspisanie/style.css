@@ -1,0 +1,16 @@
+
+nrasp{
+  position: absolute;
+  height: 35px;
+  left: 24.38%;
+  right: 67.88%;
+  top: calc(50% - 35px/2 - 192.5px);
+
+  font-family: Oxygen;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 35px;
+
+  color: #000A12;
+}

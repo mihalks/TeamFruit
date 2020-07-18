@@ -3,6 +3,14 @@ a.navbar-brand {
   text-align: center;
   word-break: break-all;
 }
+.nav-bar{
+  position: absolute;
+  width: 350px;
+  height: 1200px;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+}
 
 html {
   font-size: 14px;
@@ -15,4 +23,183 @@ html {
 
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.nav_button {
+  border: 1px solid #000
+  }
+  
+.nav_button:hover {
+ background: #808080
+ }
+
+.bluerec2{
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 93.33%;
+  background: #6ab5ff;
+  box-shadow: 0px 8px 30px rgba(30, 135, 240, 0.2);
+}
+
+.snav{
+  position: absolute;
+  height: 30px;
+  left: 36px;
+  right: 79px;
+  top: 27px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+
+.imb{
+  position: absolute;
+  width: 116px;
+  height: 103px;
+  left: 230px;
+  top: -11px;
+}
+
+.horizonline{
+  position: absolute;
+  left: 4.29%;
+  right: 4.29%;
+  top: 13.58%;
+  bottom: 86.17%;
+
+  mix-blend-mode: normal;
+  opacity: 0.2;
+  border: 1px solid #979797;
+}
+.nav-charts{
+  position: absolute;
+  left: 8.57%;
+  right: 13.43%;
+  top: 17.17%;
+  bottom: 79.5%;
+}
+.charts{
+  position: absolute;
+height: 27px;
+left: 24.55%;
+right: 63.9%;
+top: 6px;
+
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 27px;
+
+color: #000A12;
+}
+.messagepng{
+  position: absolute;
+  width: 21px;
+  height: 20px;
+  left: 10px;
+  top: 8px;
+}
+.smallright{
+  position: absolute;
+  width: 6.7px;
+  height: 10.8px;
+  left: 250px;
+ top: 0px;
+}
+.nav-tables{
+  position: absolute;
+  left: 7.14%;
+  right: 13.71%;
+  top: 22%;
+  bottom: 74.67%;
+}
+.tablespng{
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  bottom: 0%;
+}
+.tablets{
+  position: absolute;
+height: 27px;
+left: 25.99%;
+right: 36.1%;
+top: 6px;
+
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 27px;
+
+color: #000A12;
+}
+.smallright1{
+  position: absolute;
+  width: 6.7px;
+  height: 10.8px;
+  left: 256px;
+ top: 0px;
+}
+
+.top-nav{
+  position: absolute;
+  width: 1250px;
+  height: 80px;
+  left: 350px;
+  top: 0px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(27.1828px);
+}
+
+.date1b{
+  position: absolute;
+left: 8.57%;
+right: 64.86%;
+top: 8.83%;
+bottom: 88.67%;
+  background: #1E87F0;
+  box-shadow: 0px 8px 30px  rgba(30, 135, 240, 0.2);
+  border-radius: 15.5px;
+}
+.date2b{
+  position: absolute;
+  left: 37.71%;
+  right: 35.71%;
+  top: 8.83%;
+  bottom: 88.67%;
+  background: #FAA05A;
+  box-shadow: 0px 8px 30px rgba(250, 160, 90, 0.2);
+  border-radius: 15.5px;
+}
+.date3b{
+  position: absolute;
+  left: 66.86%;
+  right: 6.57%;
+  top: 8.83%;
+  bottom: 88.67%;
+  background: #32D296;
+  box-shadow: 0px 8px 30px rgba(50, 210, 150, 0.2);
+  border-radius: 15.5px;
+}
+.todays{
+  position: absolute;
+  height: 24px;
+  left: 30.11%;
+  right: 30.11%;
+  top: 2px;
+  
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  
+  text-align: center;
+  
+  color: #FFFFFF;
 }
