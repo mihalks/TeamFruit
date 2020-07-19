@@ -43,7 +43,7 @@ p {
   font-weight: lighter;
 }
 
-block{
+.block{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -87,3 +87,7 @@ right: 50;
   z-index: 101;
   width: 240px;
 } */
+
+.fix{
+  position: fixed;
+}
