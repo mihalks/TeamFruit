@@ -12,13 +12,14 @@ namespace studentOrganizer.Controllers
     public class RaspController : ControllerBase
     {
         [HttpGet]
-        public IActionResult Get([FromQuery] string gr)
+        public object Get([FromQuery] string gr) // переделать под api 
         {
-            System.Console.WriteLine($"AAAAAAAAAAAAAAAAA {gr} ");
-            string group = "3/42";
-            Parser.Pars(group);
+            System.Console.WriteLine($"Group: {gr} ");
+            //string group = "3/42";
+            //Parser.Pars(group);
             //return  Ok("Spasibo");
-            return Content("{\"firstName\": \"John\"}");
+            //return Content("{\"firstName\": \"John\"}");
+            return Timetable.GetTimetable(gr);
         }
     }
 }
