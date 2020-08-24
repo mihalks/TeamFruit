@@ -8,15 +8,21 @@ import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { chatComponent } from './chat/chat.component';
+import { ratingComponent } from './rating/rating.component';
 import { raspisanieComponent } from './raspisanie/raspisanie.component';
+import { MyDemoComponent } from './my-demo/my-demo.component';
+import { MyDayComponent } from './my-day/my-day.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
+    ratingComponent,
     HomeComponent,
     chatComponent,
-    raspisanieComponent
+    raspisanieComponent,
+    MyDemoComponent,
+    MyDayComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -25,6 +31,7 @@ import { raspisanieComponent } from './raspisanie/raspisanie.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'chat', component: chatComponent },
+      { path: 'rating', component: ratingComponent },
       { path: 'raspisanie', component: raspisanieComponent },
     ])
   ],

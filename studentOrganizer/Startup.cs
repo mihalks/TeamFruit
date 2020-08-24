@@ -50,18 +50,13 @@ namespace studentOrganizer
                 app.UseSpaStaticFiles();
             }
             app.UseRouting();
-    
+
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapHub<ChatHub>("/mychat");
-                 endpoints.MapControllers();
+                endpoints.MapControllers();
             });
-
-            // app.UseEndpoints(endpoints =>
-            // {
-            //     endpoints.MapControllers();
-            // });
 
             app.UseSpa(spa =>
             {
