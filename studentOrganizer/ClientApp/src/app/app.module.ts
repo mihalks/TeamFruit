@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { chatComponent } from './chat/chat.component';
-import { raitingComponent } from './raiting/raiting.component';
+import { ratingComponent } from './rating/rating.component';
 import { raspisanieComponent } from './raspisanie/raspisanie.component';
 import { MyDemoComponent } from './my-demo/my-demo.component';
 import { MyDayComponent } from './my-day/my-day.component';
@@ -17,7 +17,7 @@ import { MyDayComponent } from './my-day/my-day.component';
   declarations: [
     AppComponent,
     NavMenuComponent,
-    raitingComponent,
+    ratingComponent,
     HomeComponent,
     chatComponent,
     raspisanieComponent,
@@ -31,7 +31,7 @@ import { MyDayComponent } from './my-day/my-day.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'chat', component: chatComponent },
-      { path: 'raiting', component: raitingComponent },
+      { path: 'rating', component: ratingComponent },
       { path: 'raspisanie', component: raspisanieComponent },
     ])
   ],

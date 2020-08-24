@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './raiting.component.html',
   styleUrls: ['./style.css']
 })
-export class raitingComponent {
+export class ratingComponent {
   public currentCount = 0;
 
   private connection;
