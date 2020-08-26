@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   templateUrl: './home.component.html',
-  styleUrls: ['./style.css']
+  styleUrls: ['./style.css'
+  , './css/animate.scss', './css/duck.scss', './css/game.scss', './css/score.scss', './css/style.scss'
+]
 })
 export class HomeComponent {
 

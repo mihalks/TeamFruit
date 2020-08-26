@@ -1,0 +1,21 @@
+//urls
+$url_0: url(../img/aim.png);
+$url_1: url(../img/bg.gif);
+
+body {
+	margin: 0;
+	padding: 0;
+	cursor: $url_0, text;
+	overflow: hidden;
+	&:before {
+		content: '';
+		display: block;
+		position: static;
+		width: 67%;
+		height: 45%;
+		z-index: 1;
+		background: $url_1 repeat-x bottom left;
+		object-fit: cover;
+		border: 5px solid rgb(12, 81, 146);
+	}
+}
