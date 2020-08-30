@@ -1,3 +1,7 @@
-<div class="telo">
-    <div class="rating">Рейтинг</div>
-</div>
+<h2><button (click)="getRating()">Click</button><h2>
+    <div *ngFor="let item of rating">
+    <h2>{{item.subjectName}}</h2> 
+    <h2>{{item.type}}</h2>
+    <h2>{{item.finalScore}}</h2>
+  </div>
+

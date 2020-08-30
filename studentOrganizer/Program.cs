@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System.Net;
-using System.Text;
+using System.Text.RegularExpressions;
 using System.Collections.Specialized;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -20,8 +20,6 @@ namespace studentOrganizer
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
-
-            //Parser.Pars();
 
             // Ниже - те запросы, которые могу получать расписание для любой группы
             // чтобы они работали правильно, нужно адекватно связать их с методом Parser.Pars()
@@ -40,12 +38,6 @@ namespace studentOrganizer
             Parser.GetGroupID("3/42", out idgr, out idgrid);
             Console.WriteLine(idgrid);
             var str = Parser.GetSchedule(idgr, idgrid, form_id, theme_token);*/
-            
-            //Console.WriteLine(str);
-            //Utf8JsonReader
-            //var a = JsonSerializer.Deserialize(str, );
-            //string str = a.ToString();
-            //Console.WriteLine(Encoding.UTF8.GetBytes(a));
 
         }
 
