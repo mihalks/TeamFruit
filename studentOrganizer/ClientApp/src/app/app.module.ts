@@ -13,6 +13,8 @@ import { raspisanieComponent } from './raspisanie/raspisanie.component';
 import { MyDemoComponent } from './my-demo/my-demo.component';
 import { MyDayComponent } from './my-day/my-day.component';
 
+import { DataService } from './services/data.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,7 @@ import { MyDayComponent } from './my-day/my-day.component';
       { path: 'raspisanie', component: raspisanieComponent },
     ])
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

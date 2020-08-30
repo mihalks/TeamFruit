@@ -10,7 +10,6 @@ namespace studentOrganizer
     {
         public static List<RatingSubject> GetRating(string studnumber, string paspnumber)
         {
-            //string url = "https://api.allorigins.win/get?url=https://www.isuct.ru/student/rating/view?paspnumber=732022&studnumber=3180435";
             string url = $"https://www.isuct.ru/student/rating/view?paspnumber={paspnumber}&studnumber={studnumber}";
             using (var httpClient = new HttpClient())
             {

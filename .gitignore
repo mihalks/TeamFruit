@@ -235,6 +235,7 @@ _Pvt_Extensions
 # TimeTabel - временный файл
 TimeTable.json
 TimeTable.html
+TimeTabel.json
 # тож временные файлы какие-то
 launch.json
 tasks.json

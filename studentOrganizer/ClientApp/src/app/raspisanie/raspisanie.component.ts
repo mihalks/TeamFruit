@@ -1,35 +1,28 @@
 import { Component, Inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { DataService } from '../services/data.service';
+import { Group } from '../models/timetable-model';
 
 @Component({
   selector: 'app-raspisanie',
   templateUrl: './raspisanie.component.html',
-  styleUrls: ['./style.css']
+  styleUrls: ['./style.css'],
+  providers: [DataService]
 })
 export class raspisanieComponent {
-  public forecasts: OrganizerForecast[];
-private base = "";
-private http : HttpClient;
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    this.base = baseUrl;
-    this.http = http;
-    // http.get<OrganizerForecast[]>(baseUrl + 'Rasp').subscribe(result => {
-    //   this.forecasts = result;
-    //   console.log(this.forecasts);
-    // }, error => console.error(error));
+
+  public course: number = 3; // это должен вводить пользователь
+  public group: number = 147; // и это
+  public timetable: Group;
+
+  constructor(private dataService: DataService) { }
+
+  rasp() {
+    this.dataService.getTimetable(this.course, this.group).subscribe(result => {
+      this.timetable = result;
+      console.log(this.timetable); // лог в консоль браузера, потом можно удалить
+    }
+    );
   }
-  rasp(){
-     this.http.get<string>(this.base + 'Rasp').subscribe(result => {
-    console.log(result);
-  }, error => console.error(error));}
   ngOnInit() {
   }
-}
-
-interface OrganizerForecast {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
-  
 }
