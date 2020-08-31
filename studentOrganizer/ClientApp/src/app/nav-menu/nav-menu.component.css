@@ -241,3 +241,10 @@ color: #000A12;
   left: 290px;
   top: 103px;
 }
+
+.nav-bespoleznost{
+  position: absolute;
+  height: 27px;
+  left: 43%;
+  top: 200px;
+}
