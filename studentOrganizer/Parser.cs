@@ -44,13 +44,13 @@ namespace studentOrganizer
                 Parser.GetGroupID(group, out idgr, out idgrid);
                 var a = Parser.GetSchedule(idgr, idgrid, "form-VgqLx3OR83ex6fw2xvNT2KJZDbe6ohfguNIyvdVMY3A", "KwnFX21JG1hksPpOke8Yx7X7NrQ1q1kFfaEx3tUXcPc");
 
-                // using (FileStream fstream = new FileStream("./TimeTabel.json", FileMode.OpenOrCreate))
+                // using (FileStream fstream = new FileStream("./TimetableApi.json", FileMode.OpenOrCreate))
                 // {
                 //     // преобразуем строку в байты
                 //     byte[] array = System.Text.Encoding.Default.GetBytes("РАСПИСАНИЕ");// передать переменую полученую из запроса
                 //                                                                        // запись массива байтов в файл
                 //     fstream.Write(array, 0, array.Length);
-                //     string[] TimeTable = File.ReadAllLines("./TimeTabel.json");
+                //     string[] TimeTable = File.ReadAllLines("./TimetableApi.json");
                 //     Console.WriteLine("Текст записан в файл");
                 // }
                 return a;

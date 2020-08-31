@@ -16,7 +16,7 @@ namespace studentOrganizer
         public static object GetTimetable(string group)
         {
             var correctGr = Regex.Replace(group, "/", "-"); // желательно, чтобы сразу нормально отправлялось
-            using (var sr = new StreamReader("TimeTabel.json", Encoding.UTF8))
+            using (var sr = new StreamReader("TimetableApi.json", Encoding.UTF8))
             {
                 var jsonStr = sr.ReadToEnd();
                 var fullTimetable = JsonConvert.DeserializeObject<FullTimeTable>(jsonStr);
